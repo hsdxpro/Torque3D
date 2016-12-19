@@ -66,7 +66,8 @@ GuiSwatchButtonCtrl::GuiSwatchButtonCtrl()
    static StringTableEntry sProfile = StringTable->insert( "profile" );
    setDataField( sProfile, NULL, "GuiInspectorSwatchButtonProfile" );
 
-   mGridBitmap = "tools/gui/images/transp_grid";
+   static StringTableEntry sGridBitmap = StringTable->insert( "tools/gui/images/transp_grid" );
+   mGridBitmap = sGridBitmap;
 }
 
 void GuiSwatchButtonCtrl::initPersistFields()
